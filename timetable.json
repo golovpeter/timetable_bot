@@ -4,44 +4,43 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "Алгебра",
-        "teacherName": "Самофалова Галина Егоровна",
+        "lessonName": "Урок",
+        "teacherName": "Учитель",
         "roomNumber": 66
       },
       {
         "lessonNumber": 2,
-        "lessonName": "Русский язык",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 41
       },
       {
         "lessonNumber": 3,
-        "lessonName": "Геометрия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 51
       },
       {
         "lessonNumber": 4,
-        "lessonName": "Физика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
-        "roomNumber": 14,
-        "lessonTime": "10:50-11:35"
+        "roomNumber": 14
       },
       {
         "lessonNumber": 5,
-        "lessonName": "Химия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 65
       },
       {
         "lessonNumber": 6,
-        "lessonName": "Физкультура",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 7,
-        "lessonName": "География",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       }
@@ -52,43 +51,43 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "История",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 66
       },
       {
         "lessonNumber": 2,
-        "lessonName": "Физика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 3,
-        "lessonName": "Химия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 4,
-        "lessonName": "Обществознание",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 6
       },
       {
         "lessonNumber": 5,
-        "lessonName": "Физкультура",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 76
       },
       {
         "lessonNumber": 6,
-        "lessonName": "История",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 7,
-        "lessonName": "География",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 56
       }
@@ -99,37 +98,37 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "Информатика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 15
       },
       {
         "lessonNumber": 2,
-        "lessonName": "Литература",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 21
       },
       {
         "lessonNumber": 3,
-        "lessonName": "Английский язык",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 4,
-        "lessonName": "Алгебра",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 67
       },
       {
         "lessonNumber": 5,
-        "lessonName": "Геометрия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 6,
-        "lessonName": "Химия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       }
@@ -140,37 +139,37 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "История",
-        "teacherName": "Самофалова Галина Егоровна",
+        "lessonName": "Урок",
+        "teacherName": "Учитель",
         "roomNumber": 61
       },
       {
         "lessonNumber": 2,
-        "lessonName": "Обществознание",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 3,
-        "lessonName": "История",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 61
       },
       {
         "lessonNumber": 4,
-        "lessonName": "Алгебра",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 5,
-        "lessonName": "Информатика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 53
       },
       {
         "lessonNumber": 6,
-        "lessonName": "Физкультура",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 43
       }
@@ -181,37 +180,37 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "Литература",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 2,
-        "lessonName": "Английский язык",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 90
       },
       {
         "lessonNumber": 3,
-        "lessonName": "Русский язык",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 4,
-        "lessonName": "Физика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 21
       },
       {
         "lessonNumber": 5,
-        "lessonName": "Химия",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 14
       },
       {
         "lessonNumber": 6,
-        "lessonName": "Информатика",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 14
       }
@@ -222,19 +221,19 @@
     "lessons": [
       {
         "lessonNumber": 1,
-        "lessonName": "Литература",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 13
       },
       {
         "lessonNumber": 2,
-        "lessonName": "История",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 54
       },
       {
         "lessonNumber": 3,
-        "lessonName": "Физкультура",
+        "lessonName": "Урок",
         "teacherName": "Учитель",
         "roomNumber": 23
       }
