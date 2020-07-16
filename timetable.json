@@ -1,0 +1,243 @@
+[
+  {
+    "day_of_the_week": "Понедельник",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Алгебра",
+        "teacherName": "Самофалова Галина Егоровна",
+        "roomNumber": 66
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Русский язык",
+        "teacherName": "Учитель",
+        "roomNumber": 41
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Геометрия",
+        "teacherName": "Учитель",
+        "roomNumber": 51
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Физика",
+        "teacherName": "Учитель",
+        "roomNumber": 14,
+        "lessonTime": "10:50-11:35"
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Химия",
+        "teacherName": "Учитель",
+        "roomNumber": 65
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Физкультура",
+        "teacherName": "Учитель",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 7,
+        "lessonName": "География",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Вторник",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "История",
+        "teacherName": "Учитель",
+        "roomNumber": 66
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Физика",
+        "teacherName": "Учитель",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Химия",
+        "teacherName": "Учитель",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Обществознание",
+        "teacherName": "Учитель",
+        "roomNumber": 6
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Физкультура",
+        "teacherName": "Учитель",
+        "roomNumber": 76
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "История",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 7,
+        "lessonName": "География",
+        "teacherName": "Учитель",
+        "roomNumber": 56
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Среда",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Информатика",
+        "teacherName": "Учитель",
+        "roomNumber": 15
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Литература",
+        "teacherName": "Учитель",
+        "roomNumber": 21
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Английский язык",
+        "teacherName": "Учитель",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Алгебра",
+        "teacherName": "Учитель",
+        "roomNumber": 67
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Геометрия",
+        "teacherName": "Учитель",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Химия",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Четверг",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "История",
+        "teacherName": "Самофалова Галина Егоровна",
+        "roomNumber": 61
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Обществознание",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "История",
+        "teacherName": "Учитель",
+        "roomNumber": 61
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Алгебра",
+        "teacherName": "Учитель",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Информатика",
+        "teacherName": "Учитель",
+        "roomNumber": 53
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Физкультура",
+        "teacherName": "Учитель",
+        "roomNumber": 43
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Пятница",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Литература",
+        "teacherName": "Учитель",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Английский язык",
+        "teacherName": "Учитель",
+        "roomNumber": 90
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Русский язык",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Физика",
+        "teacherName": "Учитель",
+        "roomNumber": 21
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Химия",
+        "teacherName": "Учитель",
+        "roomNumber": 14
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Информатика",
+        "teacherName": "Учитель",
+        "roomNumber": 14
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Суббота",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Литература",
+        "teacherName": "Учитель",
+        "roomNumber": 13
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "История",
+        "teacherName": "Учитель",
+        "roomNumber": 54
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Физкультура",
+        "teacherName": "Учитель",
+        "roomNumber": 23
+      }
+    ]
+  }
+]
