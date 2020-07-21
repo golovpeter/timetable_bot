@@ -36,53 +36,9 @@ def start(message):
 
 @bot.message_handler(content_types=['text'])
 def get_message(message):
-    if message.text == days[0]:
-        lessons = timetable[0]['lessons']
-        result = ''
-        for lesson in lessons:
-            result += str(lesson['lessonNumber']) + "." + " " + " " + \
-                      lesson['lessonName'] + " |" + " " + lesson['teacherName'] + " |" \
-                      + ' Кабинет: ' + str(lesson['roomNumber']) + '\n'
-        bot.send_message(message.chat.id, result)
-
-    elif message.text == days[1]:
-        lessons = timetable[1]['lessons']
-        result = ''
-        for lesson in lessons:
-            result += str(lesson['lessonNumber']) + "." + " " + " " + \
-                      lesson['lessonName'] + " |" + " " + lesson['teacherName'] + " |" \
-                      + ' Кабинет: ' + str(lesson['roomNumber']) + '\n'
-        bot.send_message(message.chat.id, result)
-
-    elif message.text == days[2]:
-        lessons = timetable[2]['lessons']
-        result = ''
-        for lesson in lessons:
-            result += str(lesson['lessonNumber']) + "." + " " + " " + \
-                      lesson['lessonName'] + " |" + " " + lesson['teacherName'] + " |" \
-                      + ' Кабинет: ' + str(lesson['roomNumber']) + '\n'
-        bot.send_message(message.chat.id, result)
-
-    elif message.text == days[3]:
-        lessons = timetable[3]['lessons']
-        result = ''
-        for lesson in lessons:
-            result += str(lesson['lessonNumber']) + "." + " " + " " + \
-                      lesson['lessonName'] + " |" + " " + lesson['teacherName'] + " |" \
-                      + ' Кабинет: ' + str(lesson['roomNumber']) + '\n'
-        bot.send_message(message.chat.id, result)
-
-    elif message.text == days[4]:
-        lessons = timetable[4]['lessons']
-        result = ''
-        for lesson in lessons:
-            result += str(lesson['lessonNumber']) + "." + " " + " " + \
-                      lesson['lessonName'] + " |" + " " + lesson['teacherName'] + " |" \
-                      + ' Кабинет: ' + str(lesson['roomNumber']) + '\n'
-        bot.send_message(message.chat.id, result)
-
-    elif message.text == days[5]:
-        lessons = timetable[5]['lessons']
+    if message.text in days:
+        i = days.index(message.text)
+        lessons = timetable[i]['lessons']
         result = ''
         for lesson in lessons:
             result += str(lesson['lessonNumber']) + "." + " " + " " + \
@@ -94,7 +50,7 @@ def get_message(message):
         bot.send_photo(message.chat.id, photo)
 
     else:
-        bot.send_message(message.chat.id, 'Я тебя не понимаю!')
+        bot.send_message(message.chat.id, 'Я тебя не понимаю')
 
 
 bot.polling(none_stop=True, interval=0)
