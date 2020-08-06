@@ -14,7 +14,7 @@ def start(message):
         markup.row(*list(classes))
 
     bot.send_message(message.chat.id,
-                     "Привет, {0.first_name}! \nВыбери день недели, чтобы получить "
+                     "Привет, {0.first_name}! \nВыбери свой класс, чтобы получить "
                      "расписание.".format(
                          message.from_user),
                      parse_mode='html', reply_markup=markup)
