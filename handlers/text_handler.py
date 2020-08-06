@@ -1,10 +1,8 @@
 import os
 
-from telebot import types
-
 from config import bot, user_cache
 from constants import class_letters, class_numbers, days
-from utils import chunk
+from utils import create_buttons
 
 
 @bot.message_handler(content_types=['text'])
@@ -23,13 +21,9 @@ def handle_class_number(message):
     class_index = message.text.split()[0]
     user_cache[message.from_user.id] = class_index
 
-    keyboard_letters = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    divided_letters = chunk(class_letters, 2)
+    buttons = create_buttons(class_letters, 2)
 
-    for letters in divided_letters:
-        keyboard_letters.row(*list(letters))
-
-    bot.send_message(message.chat.id, 'Выберите букву', reply_markup=keyboard_letters)
+    bot.send_message(message.chat.id, 'Выберите букву', reply_markup=buttons)
 
 
 def handle_class_letter(message):
@@ -39,13 +33,9 @@ def handle_class_letter(message):
     file_path = os.path.join("school_classes", class_index, "{}-{}.json".format(class_index, class_letter))
     user_cache[user_id] = file_path
 
-    keyboard_days_week = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    divided_days = chunk(days, 3)
+    buttons = create_buttons(days, 3)
 
-    for day in divided_days:
-        keyboard_days_week.row(*list(day))
-
-    bot.send_message(message.chat.id, "Выберите день недели", reply_markup=keyboard_days_week)
+    bot.send_message(message.chat.id, "Выберите день недели", reply_markup=buttons)
 
 
 def handel_day_of_the_week(message):
@@ -57,4 +47,4 @@ def handel_day_of_the_week(message):
         # Вывести расписание, отобразить снова дни недели и кнопку возврата
         pass
     else:
-        bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено≥")
+        bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено")

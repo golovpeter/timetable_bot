@@ -1,20 +1,14 @@
-from telebot import types
 from config import bot
-from utils import chunk
+from utils import create_buttons
 from constants import class_numbers
 
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-
-    divided_classes = list(chunk(class_numbers, 3))
-
-    for classes in divided_classes:
-        markup.row(*list(classes))
+    buttons = create_buttons(class_numbers, 3)
 
     bot.send_message(message.chat.id,
                      "Привет, {0.first_name}! \nВыбери свой класс, чтобы получить "
                      "расписание.".format(
                          message.from_user),
-                     parse_mode='html', reply_markup=markup)
+                     parse_mode='html', reply_markup=buttons)

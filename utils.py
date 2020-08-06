@@ -1,6 +1,17 @@
 from itertools import islice
+from telebot import types
 
 
 def chunk(it, size):
     it = iter(it)
     return iter(lambda: tuple(islice(it, size)), ())
+
+
+def create_buttons(array, chunk_length):
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    divided_objects = chunk(array, chunk_length)
+
+    for objects in divided_objects:
+        keyboard.row(*list(objects))
+
+    return keyboard
