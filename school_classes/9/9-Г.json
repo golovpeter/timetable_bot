@@ -1,0 +1,207 @@
+[
+  {
+    "day_of_the_week": "Понедельник",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 66
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 41
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 51
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Урок",
+        "roomNumber": 14
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Урок",
+        "roomNumber": 65
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Урок",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 7,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Вторник",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 66
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Урок",
+        "roomNumber": 6
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Урок",
+        "roomNumber": 76
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 7,
+        "lessonName": "Урок",
+        "roomNumber": 56
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Среда",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 15
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 21
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Урок",
+        "roomNumber": 67
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Урок",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Четверг",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 61
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 61
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Урок",
+        "roomNumber": 12
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Урок",
+        "roomNumber": 53
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Урок",
+        "roomNumber": 43
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Пятница",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 34
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 90
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      },
+      {
+        "lessonNumber": 4,
+        "lessonName": "Урок",
+        "roomNumber": 21
+      },
+      {
+        "lessonNumber": 5,
+        "lessonName": "Урок",
+        "roomNumber": 14
+      },
+      {
+        "lessonNumber": 6,
+        "lessonName": "Урок",
+        "roomNumber": 14
+      }
+    ]
+  },
+  {
+    "day_of_the_week": "Суббота",
+    "lessons": [
+      {
+        "lessonNumber": 1,
+        "lessonName": "Урок",
+        "roomNumber": 13
+      },
+      {
+        "lessonNumber": 2,
+        "lessonName": "Урок",
+        "roomNumber": 54
+      },
+      {
+        "lessonNumber": 3,
+        "lessonName": "Урок",
+        "roomNumber": 23
+      }
+    ]
+  }
+]

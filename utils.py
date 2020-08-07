@@ -1,5 +1,7 @@
 from itertools import islice
 from telebot import types
+from constants import days
+import json
 
 
 def chunk(it, size):
@@ -15,3 +17,15 @@ def create_buttons(array, chunk_length):
         keyboard.row(*list(objects))
 
     return keyboard
+
+
+def get_timetable(file_path, day_of_the_week):
+    with open(file_path, encoding='utf-8') as json_file:
+        timetable = json.load(json_file)
+        i = days.index(day_of_the_week)
+        lessons = timetable[i]['lessons']
+        result = ''
+        for lesson in lessons:
+            result += '{}. {} | {}:{} \n'.format(str(lesson['lessonNumber']), lesson['lessonName'],
+                                                 'Кабинет ', lesson['roomNumber'])
+        return result

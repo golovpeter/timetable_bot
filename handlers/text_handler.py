@@ -1,8 +1,8 @@
 import os
 
 from config import bot, user_cache
-from constants import class_letters, class_numbers, days
-from utils import create_buttons
+from constants import class_letters, class_numbers, days, lower_classes_days
+from utils import create_buttons, get_timetable
 
 
 @bot.message_handler(content_types=['text'])
@@ -33,18 +33,19 @@ def handle_class_letter(message):
     file_path = os.path.join("school_classes", class_index, "{}-{}.json".format(class_index, class_letter))
     user_cache[user_id] = file_path
 
-    buttons = create_buttons(days, 3)
+    if int(class_index) >= 8:
+        buttons = create_buttons(days, 3)
+    else:
+        buttons = create_buttons(lower_classes_days, 2)
 
     bot.send_message(message.chat.id, "Выберите день недели", reply_markup=buttons)
 
 
 def handel_day_of_the_week(message):
-    day_of_the_week = message.text
     file_path = user_cache[message.from_user.id]
 
     if os.path.isfile(file_path):
-        # TODO
-        # Вывести расписание, отобразить снова дни недели и кнопку возврата
-        pass
+        timetable = get_timetable(file_path, message.text)
+        bot.send_message(message.chat.id, timetable)
     else:
         bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено")

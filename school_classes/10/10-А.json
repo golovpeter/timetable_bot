@@ -5,43 +5,36 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 66
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 41
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 51
       },
       {
         "lessonNumber": 4,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 14
       },
       {
         "lessonNumber": 5,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 65
       },
       {
         "lessonNumber": 6,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 7,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       }
     ]
@@ -52,43 +45,36 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 66
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 4,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 6
       },
       {
         "lessonNumber": 5,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 76
       },
       {
         "lessonNumber": 6,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 7,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 56
       }
     ]
@@ -99,37 +85,31 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 15
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 21
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 4,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 67
       },
       {
         "lessonNumber": 5,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 6,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       }
     ]
@@ -140,37 +120,31 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 61
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 61
       },
       {
         "lessonNumber": 4,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 12
       },
       {
         "lessonNumber": 5,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 53
       },
       {
         "lessonNumber": 6,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 43
       }
     ]
@@ -181,37 +155,31 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 34
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 90
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       },
       {
         "lessonNumber": 4,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 21
       },
       {
         "lessonNumber": 5,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 14
       },
       {
         "lessonNumber": 6,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 14
       }
     ]
@@ -222,19 +190,16 @@
       {
         "lessonNumber": 1,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 13
       },
       {
         "lessonNumber": 2,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 54
       },
       {
         "lessonNumber": 3,
         "lessonName": "Урок",
-        "teacherName": "Учитель",
         "roomNumber": 23
       }
     ]
