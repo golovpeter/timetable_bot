@@ -9,12 +9,15 @@ def chunk(it, size):
     return iter(lambda: tuple(islice(it, size)), ())
 
 
-def create_buttons(array, chunk_length):
+def create_buttons(array, chunk_length, has_return=True):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     divided_objects = chunk(array, chunk_length)
 
     for objects in divided_objects:
         keyboard.row(*list(objects))
+
+    if has_return:
+        keyboard.row('Назад')
 
     return keyboard
 

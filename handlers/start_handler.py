@@ -5,7 +5,7 @@ from constants import class_numbers
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    buttons = create_buttons(class_numbers, 3)
+    buttons = create_buttons(class_numbers, 3, has_return=False)
 
     bot.send_message(message.chat.id,
                      "Привет, {0.first_name}! \nВыбери свой класс, чтобы получить "

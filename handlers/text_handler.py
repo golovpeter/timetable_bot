@@ -13,6 +13,8 @@ def get_message(message):
         handle_class_letter(message)
     elif message.text in days:
         handel_day_of_the_week(message)
+    elif message.text == 'Назад':
+        handel_return(message)
     else:
         bot.send_message(message.chat.id, 'Я тебя не понимаю')
 
@@ -49,3 +51,9 @@ def handel_day_of_the_week(message):
         bot.send_message(message.chat.id, timetable)
     else:
         bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено")
+
+
+def handel_return(message):
+    del user_cache[message.from_user.id]
+    buttons = create_buttons(class_numbers, 3, has_return=False)
+    bot.send_message(message.chat.id, 'Выбери свой класс, чтобы получить расписание', reply_markup=buttons)
