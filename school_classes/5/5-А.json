@@ -183,25 +183,5 @@
         "roomNumber": 14
       }
     ]
-  },
-  {
-    "day_of_the_week": "Суббота",
-    "lessons": [
-      {
-        "lessonNumber": 1,
-        "lessonName": "Урок",
-        "roomNumber": 13
-      },
-      {
-        "lessonNumber": 2,
-        "lessonName": "Урок",
-        "roomNumber": 54
-      },
-      {
-        "lessonNumber": 3,
-        "lessonName": "Урок",
-        "roomNumber": 23
-      }
-    ]
   }
 ]
