@@ -1,9 +1,7 @@
 from itertools import islice
 from telebot import types
-from config import bot
 from constants import days
 import json
-import os
 
 
 def chunk(it, size):
