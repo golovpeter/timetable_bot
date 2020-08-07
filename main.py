@@ -9,13 +9,13 @@ from config import bot, TOKEN, APP_URL
 import handlers.start_handler
 import handlers.text_handler
 
+server = Flask(__name__)
+
 if __name__ == '__main__':
     if "HEROKU" in list(os.environ.keys()):
         # Heroku start
         logger = telebot.logger
         telebot.logger.setLevel(logging.INFO)
-
-        server = Flask(__name__)
 
         @server.route('/' + TOKEN, methods=['POST'])
         def getMessage():
