@@ -21,7 +21,7 @@ def get_message(message):
 
 def handle_class_number(message):
     class_index = message.text.split()[0]
-    user_cache[message.from_user.id] = class_index
+    user_cache.put(message.from_user.id, class_index)
 
     buttons = create_buttons(class_letters, 2)
 
@@ -30,10 +30,10 @@ def handle_class_number(message):
 
 def handle_class_letter(message):
     user_id = message.from_user.id
-    class_index = user_cache[user_id]
+    class_index = user_cache.get(user_id)
     class_letter = message.text
     file_path = os.path.join("school_classes", class_index, "{}-{}.json".format(class_index, class_letter))
-    user_cache[user_id] = file_path
+    user_cache.put(user_id, file_path)
 
     if int(class_index) >= 8:
         buttons = create_buttons(days, 3)
@@ -44,7 +44,7 @@ def handle_class_letter(message):
 
 
 def handle_day_of_the_week(message):
-    file_path = user_cache[message.from_user.id]
+    file_path = user_cache.get(message.from_user.id)
 
     if os.path.isfile(file_path):
         timetable = get_timetable(file_path, message.text)
@@ -54,6 +54,6 @@ def handle_day_of_the_week(message):
 
 
 def handle_return(message):
-    del user_cache[message.from_user.id]
+    user_cache.delete(message.from_user.id)
     buttons = create_buttons(class_numbers, 3, has_return=False)
     bot.send_message(message.chat.id, 'Выбери свой класс, чтобы получить расписание', reply_markup=buttons)
