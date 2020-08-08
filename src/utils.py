@@ -1,6 +1,6 @@
 from itertools import islice
 from telebot import types
-from constants import days
+from constants import DAYS
 import json
 
 
@@ -25,7 +25,7 @@ def create_buttons(array, chunk_length, has_return=True):
 def get_timetable(file_path, day_of_the_week):
     with open(file_path, encoding='utf-8') as json_file:
         timetable = json.load(json_file)
-        i = days.index(day_of_the_week)
+        i = DAYS.index(day_of_the_week)
         lessons = timetable[i]['lessons']
         result = ''
         for lesson in lessons:

@@ -24,6 +24,9 @@ class UserCache:
     def delete(self, key):
         pass
 
+    def containsKey(self, key):
+        pass
+
 
 class RedisCache(UserCache):
 
@@ -39,6 +42,9 @@ class RedisCache(UserCache):
     def delete(self, key):
         self.user_cache.delete(key)
 
+    def containsKey(self, key):
+        return self.user_cache.exists(key)
+
 
 class DictCache(UserCache):
 
@@ -53,3 +59,6 @@ class DictCache(UserCache):
 
     def delete(self, key):
         del self.user_cache[key]
+
+    def containsKey(self, key):
+        return key in self.user_cache
