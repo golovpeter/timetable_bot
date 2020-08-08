@@ -1,6 +1,6 @@
 from itertools import islice
 from telebot import types
-from constants import DAYS
+from constants import DAYS, LESSONS_TIME, LESSONS_TIME_SATURDAY
 import json
 
 
@@ -29,6 +29,14 @@ def get_timetable(file_path, day_of_the_week):
         lessons = timetable[i]['lessons']
         result = ''
         for lesson in lessons:
-            result += '{}. {} | {}:{} \n'.format(str(lesson['lessonNumber']), lesson['lessonName'],
-                                                 'Кабинет ', lesson['roomNumber'])
+            result += '{}. {} | {}:{} | {} \n'\
+                .format(str(lesson['lessonNumber']), lesson['lessonName'], 'Кабинет ',
+                        lesson['roomNumber'], get_lesson_time(day_of_the_week, lesson['lessonNumber']))
         return result
+
+
+def get_lesson_time(day_of_the_week, lesson_number):
+    if day_of_the_week != 'Суббота':
+        return LESSONS_TIME[lesson_number]
+    else:
+        return LESSONS_TIME_SATURDAY[lesson_number]
