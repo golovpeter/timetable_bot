@@ -1,5 +1,6 @@
 import logging
 import os
+import time
 
 import telebot
 from flask import Flask, request
@@ -25,6 +26,10 @@ if __name__ == '__main__':
         @server.route("/")
         def webhook():
             bot.remove_webhook()
+
+            # Pause between telegram api operations
+            time.sleep(1)
+
             bot.set_webhook(url=APP_URL + TOKEN)
             return "!", 200
 
