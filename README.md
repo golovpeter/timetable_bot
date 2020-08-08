@@ -1,10 +1,10 @@
 # Timetable bot
 Telegram school timetable bot.
 
-# How to add timetable.
+# How to add timetable
 Timetables are stored in a folder ```school_classes```. If you want to change timetable, change corresponding file in this directory.
 
-# Deployment.
+# Deployment
 
 You can deploy this bot in Heroku or in the other cloud platforms.
 
