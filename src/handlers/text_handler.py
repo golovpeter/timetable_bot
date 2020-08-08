@@ -56,12 +56,13 @@ def handle_class_letter(message):
 
 def handle_day_of_the_week(message):
     user_id = message.from_user.id
-    file_path = user_cache.get(user_id)
 
-    if not user_cache.containsKey(user_id) or not os.path.isfile(file_path):
+    if not user_cache.containsKey(user_id) or not os.path.isfile(user_cache.get(user_id)):
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
         return
+
+    file_path = user_cache.get(user_id)
 
     timetable = get_timetable(file_path, message.text)
     bot.send_message(message.chat.id, timetable)
