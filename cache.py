@@ -28,7 +28,7 @@ class UserCache:
 class RedisCache(UserCache):
 
     def __init__(self) -> None:
-        self.user_cache = redis.from_url(os.environ.get("REDIS_URL"))
+        self.user_cache = redis.from_url(os.environ.get("REDIS_URL"), decode_responses=True)
 
     def put(self, key, value):
         self.user_cache.set(key, value)
