@@ -8,8 +8,12 @@ Timetables are stored in a folder ```school_classes```. If you want to change ti
 
 You can deploy this bot in Heroku or in the other cloud platforms.
 
-For heroku deployment you need to do the next steps:
-- Create new heroku application and connect it with your bot repository;
+For Heroku deployment you need to do the next steps:
+- Create new Heroku application and connect it with your bot repository;
 - Set ```BOT_TOKEN=<your BotFather token>```, ```HEROKU=true``` env variables;
-- Install redis addon and specify ```REDIS_URL=<heroku redis url>``` env variable;
+- Install Heroku redis addon and specify ```REDIS_URL=<heroku redis url>``` env variable;
 - Deploy application.
+
+# Monitoring tools
+- [Health check monitoring](https://uptimerobot.com/)
+- [Heroku Redis moniroting](https://data.heroku.com/)
