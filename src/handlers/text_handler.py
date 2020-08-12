@@ -64,8 +64,9 @@ def handle_day_of_the_week(message):
 
     file_path = user_cache.get(user_id)
 
-    timetable = get_timetable(file_path, message.text)
-    bot.send_message(message.chat.id, timetable)
+    get_timetable(file_path, message)
+    photo = open(os.path.join('..', 'imgs', str(message.from_user.id) + '.png'), 'rb')
+    bot.send_photo(message.chat.id, photo)
 
 
 def handle_return(message):
