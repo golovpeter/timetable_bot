@@ -5,7 +5,7 @@ import time
 import telebot
 from flask import Flask, request
 
-from config import bot, TOKEN, APP_URL
+from config import bot, TOKEN, APP_URL, IMGS_DIR
 
 import handlers.start_handler
 import handlers.text_handler
@@ -30,7 +30,18 @@ def web_hook():
     return "!", 200
 
 
+def init():
+    create_img_dir()
+
+
+def create_img_dir():
+    if not os.path.isdir(IMGS_DIR):
+        os.makedirs(IMGS_DIR)
+
+
 if __name__ == '__main__':
+    init()
+
     if "HEROKU" in list(os.environ.keys()):
         # Heroku start
         logger = telebot.logger
