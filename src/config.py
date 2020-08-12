@@ -11,6 +11,8 @@ APP_URL = 'https://school4-timetable-dev.herokuapp.com/'
 # Directory with timetables
 TIMETABLES_DIR = os.path.join('..', 'school_classes')
 
+IMGS_DIR = os.path.join('..', 'imgs')
+
 user_cache = UserCacheFactory.getCache()
 
 bot = telebot.TeleBot(TOKEN)

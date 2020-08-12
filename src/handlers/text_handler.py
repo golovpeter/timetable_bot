@@ -2,7 +2,7 @@ import os
 
 from config import bot, user_cache, TIMETABLES_DIR
 from constants import *
-from utils import create_buttons, get_timetable
+from utils import create_buttons, create_timetable_image
 
 
 @bot.message_handler(content_types=['text'])
@@ -64,7 +64,7 @@ def handle_day_of_the_week(message):
 
     file_path = user_cache.get(user_id)
 
-    get_timetable(file_path, message)
+    create_timetable_image(file_path, message)
     photo = open(os.path.join('..', 'imgs', str(message.from_user.id) + '.png'), 'rb')
     bot.send_photo(message.chat.id, photo)
 
