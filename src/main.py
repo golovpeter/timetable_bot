@@ -5,7 +5,7 @@ import time
 import telebot
 from flask import Flask, request
 
-from config import bot, TOKEN, APP_URL, IMGS_DIR
+from config import bot, TOKEN, APP_URL
 
 import handlers.start_handler
 import handlers.text_handler
@@ -31,12 +31,7 @@ def web_hook():
 
 
 def init():
-    create_img_dir()
-
-
-def create_img_dir():
-    if not os.path.isdir(IMGS_DIR):
-        os.makedirs(IMGS_DIR)
+    pass
 
 
 if __name__ == '__main__':

@@ -1,11 +1,12 @@
-import os
+import io
 import json
-import plotly.graph_objects as go
-
 from itertools import islice
+
+import plotly.graph_objects as go
 from telebot import types
+
+from config import *
 from constants import *
-from config import IMGS_DIR
 
 
 def chunk(it, size):
@@ -27,19 +28,28 @@ def create_buttons(array, chunk_length, has_return=True):
 
 
 def create_timetable_image(file_path, message):
+    day_of_the_week = message.text
+    img_path = file_util.getTimetableImagePath(file_path, day_of_the_week)
+
+    if file_util.exists(img_path):
+        return
+
     with open(file_path, encoding='utf-8') as json_file:
         timetable = json.load(json_file)
-        i = DAYS.index(message.text)
+        i = DAYS.index(day_of_the_week)
         lessons = timetable[i]['lessons']
         lesson_numbers, name_of_lessons, rooms = get_table_data(lessons)
         layout = go.Layout(margin={'l': 0, 't': 0, 'b': 0, 'r': 0},
                            height=(TABLE_HEADER_HEIGHT + TABLE_ROW_HEIGHT * (len(lessons))))
         fig = go.Figure(data=[go.Table(header=dict(values=['№', 'Урок', 'Кабинет', 'Время']),
                                        cells=dict(values=[lesson_numbers, name_of_lessons, rooms,
-                                                          get_lesson_time(message.text)[0:len(lesson_numbers)]]))],
+                                                          get_lesson_time(day_of_the_week)[0:len(lesson_numbers)]]))],
                         layout=layout)
 
-        fig.write_image(os.path.join(IMGS_DIR, str(message.from_user.id) + '.png'), scale=5)
+        img_data = io.BytesIO()
+        fig.write_image(img_data, scale=5)
+        img_data.seek(0)
+        file_util.saveImage(file_util.getTimetableImagePath(file_path, day_of_the_week), img_data)
 
 
 def get_lesson_time(day_of_the_week):

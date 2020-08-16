@@ -1,6 +1,6 @@
 import os
 
-from config import bot, user_cache, TIMETABLES_DIR, IMGS_DIR
+from config import bot, user_cache, TIMETABLES_DIR, file_util
 from constants import *
 from utils import create_buttons, create_timetable_image
 
@@ -62,11 +62,11 @@ def handle_day_of_the_week(message):
         bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
         return
 
-    file_path = user_cache.get(user_id)
-
-    create_timetable_image(file_path, message)
-    photo = open(os.path.join(IMGS_DIR, str(message.from_user.id) + '.png'), 'rb')
-    bot.send_photo(message.chat.id, photo)
+    timetable_path = user_cache.get(user_id)
+    create_timetable_image(timetable_path, message)
+    img_path = file_util.getTimetableImagePath(timetable_path, message.text)
+    img_data = file_util.getFileDescriptor(img_path)
+    bot.send_photo(message.chat.id, img_data)
 
 
 def handle_return(message):
