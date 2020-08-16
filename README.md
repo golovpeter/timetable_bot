@@ -13,7 +13,7 @@ For Heroku deployment you need to do the next steps:
 - Set ```BOT_TOKEN=<your BotFather token>```, ```HEROKU=true``` env variables;
 - Install Heroku redis addon and specify ```REDIS_URL=<heroku redis url>``` env variable;
 - Create ```school4-timetable``` bucket in S3 storage;
-- Set ```AWS_ACCESS_KEY_ID=...``` and ```AWS_SECRET_ACCESS_KEY=...``` env variables;
+- Set ```AWS_ACCESS_KEY_ID=<aws acess token>``` and ```AWS_SECRET_ACCESS_KEY=<aws secret key>``` env variables;
 - Deploy application.
 
 # Monitoring tools
