@@ -42,7 +42,7 @@ def create_timetable_image(file_path, message):
         layout = go.Layout(margin={'l': 0, 't': 0, 'b': 0, 'r': 0},
                            height=(TABLE_HEADER_HEIGHT + TABLE_ROW_HEIGHT * (len(lessons))),
                            width=TABLE_WIDTH)
-        fig = go.Figure(data=[go.Table(columnwidth=[10, 40, 10, 20],
+        fig = go.Figure(data=[go.Table(columnwidth=[10, 40, 15, 20],
                                        header=dict(
                                            values=['<b>№</b>', '<b>Урок</b>', '<b>Кабинет</b>', '<b>Время</b>']),
                                        cells=dict(values=[lesson_numbers, name_of_lessons, rooms,
