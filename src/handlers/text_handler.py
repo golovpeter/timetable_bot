@@ -57,6 +57,7 @@ def handle_class_letter(message):
 def handle_day_of_the_week(message):
     if PROFILE == 'prod':
         bot.send_message(message.chat.id, "Каникулы! Приходи 1-ого сентября :)")
+        return
 
     user_id = message.from_user.id
 
