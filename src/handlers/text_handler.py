@@ -1,6 +1,6 @@
 import os
 
-from config import bot, user_cache, TIMETABLES_DIR, file_util
+from config import bot, user_cache, TIMETABLES_DIR, file_util, PROFILE
 from constants import *
 from utils import create_buttons, create_timetable_image
 
@@ -55,6 +55,9 @@ def handle_class_letter(message):
 
 
 def handle_day_of_the_week(message):
+    if PROFILE == 'prod':
+        bot.send_message(message.chat.id, "Каникулы! Приходи 1-ого сентября :)")
+
     user_id = message.from_user.id
 
     if not user_cache.containsKey(user_id) or not os.path.isfile(user_cache.get(user_id)):
