@@ -69,7 +69,10 @@ class S3FileUtil(FileUtil):
         keys = []
         resp = self.getS3Client().list_objects_v2(Bucket=BUCKET_NAME)
         for obj in resp['Contents']:
-            keys.append(obj['Key'])
+            if obj['Key'] not in obj:
+                continue
+            else:
+                keys.append(obj['Key'])
         return keys
 
     @staticmethod
