@@ -4,17 +4,15 @@ import telebot
 
 from cache import UserCacheFactory
 
-# Token from BotFather
+PROFILE = os.environ.get('PROFILE', 'local')
 TOKEN = os.environ.get('BOT_TOKEN', '')
-# Heroku app url
-APP_URL = 'https://school4-timetable-dev.herokuapp.com/'
-# Directory with timetables
+APP_URL = 'https://school4-timetable-{}.herokuapp.com/'.format(PROFILE)
 TIMETABLES_DIR = os.path.join('..', 'school_classes')
 
 IMGS_DIR = os.path.join('..', 'imgs')
 
 # S3 Bucket name
-BUCKET_NAME = "school4-timetable"
+BUCKET_NAME = os.environ.get('BUCKET_NAME', '')
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
 
