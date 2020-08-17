@@ -40,8 +40,11 @@ def create_timetable_image(file_path, message):
         lessons = timetable[i]['lessons']
         lesson_numbers, name_of_lessons, rooms = get_table_data(lessons)
         layout = go.Layout(margin={'l': 0, 't': 0, 'b': 0, 'r': 0},
-                           height=(TABLE_HEADER_HEIGHT + TABLE_ROW_HEIGHT * (len(lessons))))
-        fig = go.Figure(data=[go.Table(header=dict(values=['№', 'Урок', 'Кабинет', 'Время']),
+                           height=(TABLE_HEADER_HEIGHT + TABLE_ROW_HEIGHT * (len(lessons))),
+                           width=TABLE_WIDTH)
+        fig = go.Figure(data=[go.Table(columnwidth=[10, 40, 10, 20],
+                                       header=dict(
+                                           values=['<b>№</b>', '<b>Урок</b>', '<b>Кабинет</b>', '<b>Время</b>']),
                                        cells=dict(values=[lesson_numbers, name_of_lessons, rooms,
                                                           get_lesson_time(day_of_the_week)[0:len(lesson_numbers)]]))],
                         layout=layout)
