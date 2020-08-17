@@ -68,6 +68,8 @@ class S3FileUtil(FileUtil):
     def get_bucket_keys(self):
         keys = []
         resp = self.getS3Client().list_objects_v2(Bucket=BUCKET_NAME)
+        if 'Contents' not in resp.keys():
+            return keys
         for obj in resp['Contents']:
             keys.append(obj['Key'])
         return keys
