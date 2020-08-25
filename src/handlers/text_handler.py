@@ -21,7 +21,8 @@ def get_message(message):
 
 def handle_class_number(message):
     class_index = message.text.split()[0]
-    user_cache.put(message.from_user.id, class_index)
+    inf_dict = dict(class_index=class_index)
+    user_cache.put(message.from_user.id, inf_dict)
 
     buttons = create_buttons(CLASS_LETTERS, 2)
 
@@ -31,12 +32,12 @@ def handle_class_number(message):
 def handle_class_letter(message):
     user_id = message.from_user.id
 
-    if not user_cache.containsKey(user_id) or not user_cache.get(user_id) in CLASS_NUMBERS:
+    if not user_cache.containsKey(user_id) or not (user_cache.get(user_id)).get('class_index') in CLASS_NUMBERS:
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
         return
 
-    class_index = user_cache.get(user_id)
+    class_index = (user_cache.get(user_id)).get('class_index')
     class_letter = message.text
     file_path = os.path.join(TIMETABLES_DIR, class_index, "{}-{}.json".format(class_index, class_letter))
 
@@ -44,7 +45,8 @@ def handle_class_letter(message):
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено", reply_markup=buttons)
 
-    user_cache.put(user_id, file_path)
+    inf_dict = dict(class_index=class_index, class_letter=class_letter, file_path=file_path)
+    user_cache.put(user_id, inf_dict)
 
     if int(class_index) >= 8:
         buttons = create_buttons(DAYS, 3)
@@ -61,12 +63,12 @@ def handle_day_of_the_week(message):
 
     user_id = message.from_user.id
 
-    if not user_cache.containsKey(user_id) or not os.path.isfile(user_cache.get(user_id)):
+    if not user_cache.containsKey(user_id) or not os.path.isfile((user_cache.get(user_id)).get('file_path')):
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
         return
 
-    timetable_path = user_cache.get(user_id)
+    timetable_path = (user_cache.get(user_id)).get('file_path')
     create_timetable_image(timetable_path, message)
     img_path = file_util.getTimetableImagePath(timetable_path, message.text)
     img_data = file_util.getFileDescriptor(img_path)
