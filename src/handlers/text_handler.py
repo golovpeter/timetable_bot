@@ -71,7 +71,21 @@ def handle_class_profile(message):
     user_id = message.from_user.id
     class_profile = message.text
 
+    if not user_cache.containsKey(user_id) \
+            or not (user_cache.get(user_id)).get('class_index') in CLASS_NUMBERS\
+            or user_cache.get(user_id).get('file_path') is None \
+            or not os.path.isfile(user_cache.get(user_id).get('file_path')):
+        buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
+        bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
+        return
+
     cache_data = user_cache.get(user_id)
+
+    if class_profile not in get_classes_profiles(cache_data['file_path']):
+        buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
+        bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
+        return
+
     cache_data['class_profile'] = class_profile
     user_cache.put(user_id, cache_data)
 
@@ -90,7 +104,9 @@ def handle_day_of_the_week(message):
 
     user_id = message.from_user.id
 
-    if not user_cache.containsKey(user_id) or not os.path.isfile(user_cache.get(user_id).get('file_path')):
+    if not user_cache.containsKey(user_id) \
+            or user_cache.get(user_id).get('file_path') is None \
+            or not os.path.isfile(user_cache.get(user_id).get('file_path')):
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, 'Ошибка. Давай попробуем сначала. Выбери класс', reply_markup=buttons)
         return
