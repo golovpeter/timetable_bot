@@ -27,17 +27,19 @@ def create_buttons(array, chunk_length, has_return=True):
     return keyboard
 
 
-def create_timetable_image(file_path, message):
+def create_timetable_image(file_path, message, class_profile):
     day_of_the_week = message.text
-    img_path = file_util.getTimetableImagePath(file_path, day_of_the_week)
+    img_path = file_util.getTimetableImagePath(file_path, class_profile, day_of_the_week)
 
     if file_util.exists(img_path):
         return
 
     with open(file_path, encoding='utf-8') as json_file:
         timetable = json.load(json_file)
-        i = DAYS.index(day_of_the_week)
-        lessons = timetable[i]['lessons']
+        class_profiles = get_classes_profiles(file_path)
+        day_index = DAYS.index(day_of_the_week)
+        profile_index = class_profiles.index(class_profile)
+        lessons = timetable[profile_index]['timetable'][day_index]['lessons']
         lesson_numbers, name_of_lessons, rooms = get_table_data(lessons)
         layout = go.Layout(margin={'l': 0, 't': 0, 'b': 0, 'r': 0},
                            height=(TABLE_HEADER_HEIGHT + TABLE_ROW_HEIGHT * (len(lessons))),
@@ -52,7 +54,7 @@ def create_timetable_image(file_path, message):
         img_data = io.BytesIO()
         fig.write_image(img_data, scale=5)
         img_data.seek(0)
-        file_util.saveImage(file_util.getTimetableImagePath(file_path, day_of_the_week), img_data)
+        file_util.saveImage(img_path, img_data)
 
 
 def get_lesson_time(day_of_the_week):
@@ -80,3 +82,12 @@ def get_table_data(lessons):
         counter += 1
 
     return lesson_numbers, name_of_lessons, rooms
+
+
+def get_classes_profiles(file_path):
+    class_profiles = []
+    with open(file_path, encoding='utf-8') as json_file:
+        timetable = json.load(json_file)
+        for i in range(len(timetable)):
+            class_profiles.append(timetable[i]['profile'])
+    return class_profiles

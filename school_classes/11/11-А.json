@@ -210,14 +210,14 @@
     ]
   },
   {
-    "profile": "Естестевенно-научный профиль",
+    "profile": "Естественно-научный профиль",
     "timetable": [
       {
         "day_of_the_week": "Понедельник",
         "lessons": [
           {
             "lessonNumber": 1,
-            "lessonName": "Урок",
+            "lessonName": "ТЕСТ2",
             "roomNumber": 66
           },
           {
