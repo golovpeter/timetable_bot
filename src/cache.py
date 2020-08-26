@@ -34,10 +34,10 @@ class RedisCache(UserCache):
         self.user_cache = redis.from_url(os.environ.get("REDIS_URL"), decode_responses=True)
 
     def put(self, key, value):
-        self.user_cache.set(key, value)
+        self.user_cache.hmset(key, value)
 
     def get(self, key):
-        return self.user_cache.get(key)
+        return self.user_cache.hgetall(key)
 
     def delete(self, key):
         self.user_cache.delete(key)
