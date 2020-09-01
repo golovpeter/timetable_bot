@@ -26,7 +26,7 @@ def handle_class_number(message):
     cache_dict = {'class_index': class_index}
     user_cache.put(message.from_user.id, cache_dict)
 
-    buttons = create_buttons(CLASS_LETTERS, 2)
+    buttons = create_buttons(CLASS_LETTERS, 3)
 
     bot.send_message(message.chat.id, 'Выбери букву', reply_markup=buttons)
 
@@ -47,6 +47,7 @@ def handle_class_letter(message):
     if not os.path.isfile(file_path):
         buttons = create_buttons(CLASS_NAMES, 3, has_return=False)
         bot.send_message(message.chat.id, "Расписание для выбранного класса не найдено", reply_markup=buttons)
+        return
 
     cache_data['class_letter'] = class_letter
     cache_data['file_path'] = file_path
