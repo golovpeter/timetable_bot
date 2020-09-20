@@ -5,12 +5,19 @@ import redis
 
 class UserCacheFactory:
 
+    __instance = None
+
     @staticmethod
     def getCache():
+        if UserCacheFactory.__instance is not None:
+            return UserCacheFactory.__instance
+
         if "HEROKU" in list(os.environ.keys()):
-            return RedisCache()
+            UserCacheFactory.__instance = RedisCache()
         else:
-            return DictCache()
+            UserCacheFactory.__instance = DictCache()
+
+        return UserCacheFactory.__instance
 
 
 class UserCache:

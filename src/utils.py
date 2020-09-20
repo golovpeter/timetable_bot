@@ -5,8 +5,10 @@ from itertools import islice
 import plotly.graph_objects as go
 from telebot import types
 
-from config import *
 from constants import *
+from fileutil import FileUtilFactory
+
+file_util = FileUtilFactory.getFileUtil()
 
 
 def chunk(it, size):
