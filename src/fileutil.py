@@ -2,17 +2,24 @@ import os
 
 import boto3
 
-from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, BUCKET_NAME, IMGS_DIR, TIMETABLES_DIR
+from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, BUCKET_NAME, IMG_DIR, TIMETABLES_DIR
 
 
 class FileUtilFactory:
 
+    __instance = None
+
     @staticmethod
     def getFileUtil():
+        if FileUtilFactory.__instance is not None:
+            return FileUtilFactory.__instance
+
         if "HEROKU" in list(os.environ.keys()):
-            return S3FileUtil()
+            FileUtilFactory.__instance = S3FileUtil()
         else:
-            return DiskFileUtil()
+            FileUtilFactory.__instance = S3FileUtil()
+
+        return FileUtilFactory.__instance
 
 
 class FileUtil:
@@ -41,7 +48,7 @@ class DiskFileUtil(FileUtil):
     def getTimetableImagePath(self, json_path, class_profile, day_of_the_week):
         img_path = json_path.replace(TIMETABLES_DIR, "", 1)
         img_path = img_path.split(".")[0] + "_" + class_profile + "_" + day_of_the_week + ".png"
-        return IMGS_DIR + img_path
+        return IMG_DIR + img_path
 
     def exists(self, file_path):
         return os.path.exists(file_path)

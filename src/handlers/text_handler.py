@@ -1,9 +1,13 @@
 import os
 
-from config import bot, user_cache, TIMETABLES_DIR, file_util, PROFILE
+from cache import UserCacheFactory
+from config import bot, TIMETABLES_DIR, PROFILE
 from constants import *
+from fileutil import FileUtilFactory
 from utils import create_buttons, create_timetable_image, get_classes_profiles
 
+user_cache = UserCacheFactory.getCache()
+file_util = FileUtilFactory.getFileUtil()
 
 @bot.message_handler(content_types=['text'])
 def get_message(message):
