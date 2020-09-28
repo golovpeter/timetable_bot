@@ -17,7 +17,7 @@ class FileUtilFactory:
         if "HEROKU" in list(os.environ.keys()):
             FileUtilFactory.__instance = S3FileUtil()
         else:
-            FileUtilFactory.__instance = S3FileUtil()
+            FileUtilFactory.__instance = DiskFileUtil()
 
         return FileUtilFactory.__instance
 
