@@ -29,14 +29,7 @@ def web_hook():
     bot.set_webhook(url=APP_URL + TOKEN)
     return "!", 200
 
-
-def init():
-    pass
-
-
 if __name__ == '__main__':
-    init()
-
     if "HEROKU" in list(os.environ.keys()):
         # Heroku start
         logger = telebot.logger
